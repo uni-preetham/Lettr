@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+import { getAuth, signOut } from "firebase/auth";
+import { getFirestore, collection, addDoc, doc, getDoc, getDocs, query } from 'firebase/firestore';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -15,17 +16,10 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID
 };
 
-// const firebaseConfig = {
-//   apiKey: "AIzaSyCZk6RUE-sPQy0XAX9ZM4Q6kVCDhTdE9Yc",
-//   authDomain: "loveletter-d6fb8.firebaseapp.com",
-//   projectId: "loveletter-d6fb8",
-//   storageBucket: "loveletter-d6fb8.firebasestorage.app",
-//   messagingSenderId: "762489962298",
-//   appId: "1:762489962298:web:d8d2e6086f6eee03729a03"
-// };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const db = getFirestore(app);
 
-export {auth}
+export { auth, db, collection, addDoc, doc, getDoc, getDocs, query, signOut };
