@@ -22,7 +22,6 @@ const LoginForm: React.FC = () => {
       alert('Error logging in user');
     }
   };
-
   return (
     <div className="container mx-auto flex flex-col relative justify-center items-center h-screen">
       <Link href='/register' className='absolute top-5 right-5'>Register</Link>

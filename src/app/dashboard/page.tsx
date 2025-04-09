@@ -67,7 +67,7 @@ if (loading) return (
   return (
     <div className="container mx-auto flex flex-col items-center">
       {/* Logout */}
-      <div className="w-[90%] bg-gray-100 rounded-full px-5 py-2 my-2 mx-5 flex justify-between items-center">
+      <div className="md:w-full w-[90%] bg-gray-100 rounded-full px-5 py-2 my-2 mx-5 flex justify-between items-center">
         <Link href="/dashboard" className="text-2xl font-bold  px-5 py-2">Lettr.</Link>
         <div className="md:hidden relative">
           <button onClick={() => setMenuOpen(!menuOpen)} className="underline text-black">
